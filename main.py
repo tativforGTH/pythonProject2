@@ -24,9 +24,13 @@ def create_html(valutes):
     text += '</tr>'
     for valute in valutes:
         text += '<tr>'
-        for v in valute.values():
+        v_v = 0.0
 
-            text += f'<td>{v}</td>'
+        for v in valute.values():
+            text += f'<td> {v} </td>'
+
+
+        text += f'<td> {round(valute["Previous"] - valute["Value"], 4)} </td>'
         text += '</tr>'
 
     text += '</table>'
